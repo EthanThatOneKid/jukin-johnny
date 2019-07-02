@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Jukin' EZ</title>
+	<link rel="shortcut icon" type="image/x-icon" href="http://ethandavidson.com/johnny/johnny-logo.gif" />
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
+	<script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.sound.js"></script>
+
+	<script src="ez.js"></script>
+
+	<script>
+		var playlist = [
+			"lLhbrr-_Ss4", // stereo sayan
+			"mvLPEGCVZ_w", // brain power - nova
+			"2EO6yJAVC3I", // you say run
+			"VJf5ZNYx_8Q", // oblivion - thefatrat
+			"q-lYYRjF7tI", // infinite power - thefatrat
+			"lJKV1FPOQp4", // pokemon theme
+			"sngQtwOOzug", // RED/BLUE Theme
+			"27Sl5rrIr-g"  // bob ross
+		];
+		
+		window.onload = function() {
+			document.getElementById('song').src = "https://www.youtube.com/embed/" + playlist[Math.floor(Math.random()*playlist.length)] + "?autoplay=1&loop=1";
+		}
+	</script>
+
+	<script>
+/*
+		window.onload = function() {
+			var today = new Date();
+			var url;
+			var bg = document.getElementById("html");
+
+			if (today.getMonth() >= 0) {
+				url = 'https://media.giphy.com/media/bhFMbDZpU1Cuc/giphy.gif';
+			}
+			if (today.getMonth() >= 2) {
+				url = '';
+			}
+			if (today.getMonth() >= 5) {
+				url = '';
+			}
+			if (today.getMonth() >= 8) {
+				url = 'http://img22.laughinggif.com/pic/HTTP21lZGlhLmdpcGh5LmNvbS9tZWRpYS8zeHoyQlZ4empaVm5HZGdHVlcvZ2lwaHkuZ2lm.gif';
+			}
+			if (today.getMonth() >= 11) {
+				url = 'https://media.giphy.com/media/bhFMbDZpU1Cuc/giphy.gif';
+			}
+			document.html.style.background = 'url(' + url + ') no-repeat center center fixed';
+			//bg.style.background = 'url(url) no-repeat center center fixed;'
+		}
+*/
+	</script>
+
+			
+	
+	<style>
+		body {
+			margin:0;
+			padding:0;
+			overflow: hidden;
+		}
+
+		#bg {
+  			position: fixed; 
+  			top: 0; 
+  			left: 0; 
+			z-index: -1;
+	
+  			/* Preserve aspet ratio */
+  			min-width: 100%;
+  			min-height: 100%;
+		}
+		canvas {
+			margin:auto;
+		}
+
+		.border {
+			text-align: center;
+			border: solid;
+			color: red;
+		}
+
+		html { 
+  			background: url("http://img22.laughinggif.com/pic/HTTP21lZGlhLmdpcGh5LmNvbS9tZWRpYS8zeHoyQlZ4empaVm5HZGdHVlcvZ2lwaHkuZ2lm.gif") no-repeat center center fixed; 
+  			-webkit-background-size: cover;
+  			-moz-background-size: cover;
+  			-o-background-size: cover;
+  			background-size: cover;
+		}
+
+	</style>
+</head>
+
+<body>
+
+<iframe id="song" width='640' height='360' style="display:none;" src='' frameborder='0' frameborder='0' allowfullscreen></iframe>
+
+<font size=5px>
+<!--
+http://patorjk.com/text-color-fader/
+-->
+
+<h1 class = "border" style="background-color: black; font-family: 'Permanent Marker', cursive;">
+<div><span style="color:#ff0000;">J</span><span style="color:#ff4000;">u</span><span style="color:#ff7f00;">k</span><span style="color:#ffbf00;">i</span><span style="color:#ffff00;">n</span><span style="color:#80ff00;">'</span><span style="color:#00ff00;">	</span><span style="color:#00ff80;">J</span><span style="color:#00ffff;">o</span><span style="color:#0080ff;">h</span><span style="color:#0000ff;">n</span><span style="color:#4600ff;">n</span><span style="color:#8b00ff;">y</span>	<span style="color:#4600ff;"> </span><span style="color:#ffbf00;">EZ</span></div>
+</h1>
+</font>
+
+
+<table align="center">
+
+<tr align='center'>
+
+<td align="center">
+<table id="store">
+<tr align='center'> 
+<td align="center" style="background-color: white;">
+<h1>Student Store</h1>
+<button type="button" id="decreaseF">
+Decrease F's Level<br>
+cost: 400 points
+</button>
+</td></tr>
+</table>
+
+</td>
+
+<td align="center">
+<img src="http://ethandavidson.com/johnny/johnny-logo.gif" alt="Johnny" style="width:900px; height:0px;">
+</td>
+
+
+<td align="center">
+<p style="background-color: orange;">
+Use the mouse<br>
+to move Johnny.
+</p>
+<br><br><br>
+<form action="http://www.ethandavidson.com/johnny/ez.html">
+    <input type="submit" value="Restart" />
+</form>
+<br><br><br>
+<form action="http://www.ethandavidson.com/johnny/">
+    <input type="submit" value="Return to Jukin' Johnny" />
+</form>
+<tr><td>
+</table>
+
+</body>
+</html>

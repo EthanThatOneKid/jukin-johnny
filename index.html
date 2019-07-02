@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Jukin' Johnny</title>
+	<link rel="shortcut icon" type="image/x-icon" href="http://ethandavidson.com/johnny/johnny-logo.gif" />
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
+	<script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.sound.js"></script>
+
+	<script src="sketch.js"></script>
+
+	<script>
+		var playlist = [
+			"lLhbrr-_Ss4", // stereo sayan
+			"mvLPEGCVZ_w", // brain power - nova
+			"2EO6yJAVC3I", // you say run
+			"VJf5ZNYx_8Q", // oblivion - thefatrat
+			"q-lYYRjF7tI", // infinite power - thefatrat
+			"lJKV1FPOQp4", // pokemon theme
+			"sngQtwOOzug", // RED/BLUE Theme
+			"27Sl5rrIr-g"  // bob ross
+		];
+		
+		window.onload = function() {
+			document.getElementById('song').src = "https://www.youtube.com/embed/" + playlist[Math.floor(Math.random()*playlist.length)] + "?autoplay=1&loop=1";
+		}
+	</script>			
+	
+	<style>
+		body {
+			margin:0;
+			padding:0;
+			overflow: hidden;
+		}
+
+		#bg {
+  			position: fixed; 
+  			top: 0; 
+  			left: 0; 
+			z-index: -1;
+	
+  			/* Preserve aspet ratio */
+  			min-width: 100%;
+  			min-height: 100%;
+		}
+		canvas {
+			margin:auto;
+		}
+
+		.border {
+			text-align: center;
+			border: solid;
+			color: red;
+		}
+
+		html { 
+  			background: url("http://img22.laughinggif.com/pic/HTTP21lZGlhLmdpcGh5LmNvbS9tZWRpYS8zeHoyQlZ4empaVm5HZGdHVlcvZ2lwaHkuZ2lm.gif") no-repeat center center fixed; 
+  			-webkit-background-size: cover;
+  			-moz-background-size: cover;
+  			-o-background-size: cover;
+  			background-size: cover;
+		}
+
+	</style>
+</head>
+
+<body>
+
+<iframe id="song" width='640' height='360' style="display:none;" src='' frameborder='0' frameborder='0' allowfullscreen></iframe>
+
+<font size=5px>
+<!--
+http://patorjk.com/text-color-fader/
+-->
+
+<h1 class = "border" style="background-color: black; font-family: 'Permanent Marker', cursive;">
+<div><span style="color:#ff0000;">J</span><span style="color:#ff4000;">u</span><span style="color:#ff7f00;">k</span><span style="color:#ffbf00;">i</span><span style="color:#ffff00;">n</span><span style="color:#80ff00;">'</span><span style="color:#00ff00;">	</span><span style="color:#00ff80;">J</span><span style="color:#00ffff;">o</span><span style="color:#0080ff;">h</span><span style="color:#0000ff;">n</span><span style="color:#4600ff;">n</span><span style="color:#8b00ff;">y</span></div>
+</h1>
+</font>
+
+
+<table align="center">
+
+<tr align='center'>
+
+<td align="center">
+<font size=4px>
+<p style="background-color: orange;">
+Use the arrow keys or WASD<br>
+keys to move Johnny.
+</p>
+<p style="background-color: white;">
+Send highscores or<br> 
+song requests to<br>
+<a href="mailto:ethan.r.davidson@gmail.com">EthanThatOneKid</a><br>
+<small>&copy; 2017 Ethan Davidson</small>
+</p>
+</font>
+<form action="http://www.ethandavidson.com/johnny/">
+    <input type="submit" value="Restart" />
+</form>
+<form action="http://www.ethandavidson.com/johnny/ez.html">
+    <input type="submit" value="EZ version" />
+</form>
+<form action="http://www.ethandavidson.com/flashlight">
+    <input type="submit" value="BETA: Flashlight" />
+</form>
+</td>
+
+<td align="center">
+<img src="http://ethandavidson.com/johnny/johnny-logo.gif" alt="Johnny" style="width:900px; height:0px;">
+</td>
+
+
+<td align="center">
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSLG575yilctgNLuWSRYwm3OehUmFH9XUV1LmQc_GSSQatduqF3IbhbohVx34e1BVGJ_x-WSchIRT4k/pubhtml?widget=false&amp;headers=false" width="200" height="250" scrolling='no'></iframe>
+
+<small>
+<!--
+<table style="background-color: white;">
+<th align="center"><em><strong>&#175;	JUKIN' MASTERS	&#172;</strong></em></th>
+<tr><td><strong>NAME</strong></td> <td><strong>SCORE</strong></td></tr>
+<tr><td style="background-color: yellow;">1. Chris</td> <td>5595</td></tr>
+<tr><td style="background-color: grey;"  >2. Alan</td> <td>4556</td></tr>
+<tr><td style="background-color: orange;">3. Juan</td> <td>4478</td></tr>
+<tr><td>4. Ethan</td> <td>3142</td></tr>
+<tr><td>5. Conglam</td> <td>3004</td></tr>
+<tr><td>6. Sam</td> <td>2897</td></tr>
+<tr><td>7. Jason</td> <td>2865</td></tr>
+<tr><td>8. Elena</td> <td>2809</td></tr>
+<tr><td>9. Gregory</td> <td>2761</td></tr>
+<tr><td>10. Andre</td> <td>2242</td></tr>
+<tr><td>11. Andrew</td> <td>1974</td></tr>
+<tr><td>12. Connor</td> <td>1742</td></tr>
+</table>
+-->
+</small>
+</td></tr>
+
+<tr><td>
+
+<table id="store">
+
+<tr align='center'> 
+<td align="center" style="background-color: white;">
+<h1>Student Store</h1>
+<button type="button" id="decreaseF">
+Decrease F's Level<br>
+cost: 400 points
+</button>
+</td></tr>
+</table>
+
+</td>
+
+<td align="center">
+<img src="http://ethandavidson.com/johnny/johnny-logo.gif" alt="Johnny" style="width:900px; height:0px;">
+</td>
+
+<td align="center">
+<!--
+<img src="http://img64.laughinggif.com/pic/HTTPS9tZWRpYS5naXBoeS5jb20vbWVkaWEvdVNOV09BcjFrTnRkZS9naXBoeS5naWYlog.gif" alt="pumpkin" style="width:200px; height:200px;">
+-->
+<iframe src="https://calendar.google.com/calendar/b/1/embed?showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=200&amp;wkst=1&amp;bgcolor=%2366ff99&amp;src=vno0b73gdm6h5m6ntl3ds4nebc%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FLos_Angeles" style="border:solid 1px #777" width="200" height="200" frameborder="0" scrolling="no"></iframe>
+</td>
+
+</tr>
+</table>
+
+</body>
+</html>
