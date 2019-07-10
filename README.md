@@ -28,6 +28,11 @@ Looking back on this project, two summers later (now having graduated high schoo
 
 ![johnny](johnny-logo.gif)
 
+# Demo
+**Check out what the game looks like in action...**
+
+![demo](demo.gif)
+
 ---
 
 Programmed with 💖 by EthanThatOneKid '17-beyond
